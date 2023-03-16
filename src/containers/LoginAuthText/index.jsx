@@ -68,7 +68,7 @@ export default function LoginAuthText() {
                                 <Text fontSize={"lg"} fontWeight={"extrabold"} pd={"12px"} align={"center"}>
                                     Authenticated as {username}
                                 </Text>
-                                <Text color={"#ffffff"}>HU4ha7sf234hn23HA7832</Text>
+                                <Text color={"#ffffff"} id={"authentication-text"}>{authenticated ? "HU4ha7sf234hn23HA7832" : ""}</Text>
                             </Box>
                         </Stack>
                     </Form>
