@@ -1,8 +1,10 @@
 import React, {useState} from "react";
 import {Box, Button, ButtonGroup, FormControl, FormLabel, Input, Stack, Text} from "@chakra-ui/react";
 import {Field, Form, Formik} from "formik";
+import {useNavigate} from "react-router-dom";
 
 export default function LoginAuthText() {
+    const navigate = useNavigate();
     const [authenticated, setAuthenticated] = useState(true);
     const [username, setUsername] = useState("");
 
@@ -11,6 +13,7 @@ export default function LoginAuthText() {
         setUsername(data.username);
         if (data.username === "guest" || data.username === "espot") {
             setAuthenticated(!authenticated);
+            navigate("/login/loginauthtextsuccess");
         }
     }
 
@@ -68,7 +71,7 @@ export default function LoginAuthText() {
                                 <Text fontSize={"lg"} fontWeight={"extrabold"} pd={"12px"} align={"center"}>
                                     Authenticated as {username}
                                 </Text>
-                                <Text color={"#ffffff"} id={"authentication-text"}>{authenticated ? "HU4ha7sf234hn23HA7832" : ""}</Text>
+                                {/*<Text color={"#ffffff"} id={"authentication-text"}>{authenticated ? "HU4ha7sf234hn23HA7832" : ""}</Text>*/}
                             </Box>
                         </Stack>
                     </Form>
