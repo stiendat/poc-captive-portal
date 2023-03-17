@@ -8,7 +8,7 @@ import ChooseAuth from "./containers/ChooseAuth/index.jsx";
 function App() {
     const routes = createBrowserRouter([
         {
-            path: "/",
+            path: "/login",
             element: <AppFrame/>,
             children: [
                 {
@@ -16,11 +16,11 @@ function App() {
                   element: <ChooseAuth/>
                 },
                 {
-                    path: "/radius",
+                    path: "/login/radius",
                     element: <LoginRadius/>
                 },
                 {
-                    path: "/authtext",
+                    path: "/login/authtext",
                     element: <LoginAuthText/>
                 }
             ]
